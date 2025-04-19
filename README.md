@@ -42,9 +42,23 @@ Some of the key business questions we aimed to answer include:
 - What is the Average Salary within a company?
 - What is the Average Age of employees?
 
+### Visualization Plan
 
-3. Analyzing the HR data some KPIs i want to find out, then create separate table and include all the measures:
+Below are the key visualizations that we will generate for the HR Analytics Dashboard:
+
+- Headcount by Department
+- Headcount by Age Bucket
+- Headcount by Marital Status and Gender
+- Cumulative Headcount and Headcount by Date of Hire
+- Attrition by Date of Hire
+- Headcount by Recruitment Source
+
+### Data Analyzing
+
+Analyzing the HR data some KPIs i want to find out, then create separate table and include all the measures:
 
 - Count the employee ID (click new measure) and name it as “Headcount” , to track the total number of employees.
+
+code
 
 - Calculate the number of employees who have left the organization, Attrition in HRDataset_v14 table,
