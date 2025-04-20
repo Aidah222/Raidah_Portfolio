@@ -53,12 +53,85 @@ Below are the key visualizations that we will generate for the HR Analytics Dash
 - Attrition by Date of Hire
 - Headcount by Recruitment Source
 
-### Data Analyzing
+### Data Analysis
 
-Analyzing the HR data some KPIs i want to find out, then create separate table and include all the measures:
+Analyzing the HR data some KPIs i want to find out, then create separate table (name as "Measure" table) and include all the measures:
 
-- Count the employee ID (click new measure) and name it as “Headcount” , to track the total number of employees.
+1. To track the total number of employees,
+- Count the employee ID (click new measure) and name it as “Headcount”:
+  
+```Power BI
+Headcount = COUNT(HRDataset_v14[EmpID])
+```
 
-code
+2. Calculate the number of employees who have left the organization (Attrition),
+- Firstly, we will created a calculated column in the HRDataset_v14 table to identify if an employee is "Active" or has "Left" (Attrition). We will using the following formula:
 
-- Calculate the number of employees who have left the organization, Attrition in HRDataset_v14 table,
+```Power BI
+Attrition = IF(HRDataset_v14[EmploymentStatus]="Active",1,0)
+```
+- This formula assigns value "1" to employees who are still active and "0" to those who have left the organization.
+  
+- Next, we will calculate Attrition in Measure table:
+
+```Power BI
+Attrition = var a
+          = CALCULATE(COUNT(HRDataset_v14[EmpID]), FILTER(HRDataset_v14,HRDataset_v14[Attrition]=0))
+return a
+```
+
+- This formula counts the number of employees with Attrition = 0 in the HRDataset_v14 table, which represents employees who have left the organization.
+
+
+3. Determine the Attrition Rate (Attrition %),
+- Now, calculate the percentage of employees who have left in relation to the total number of employees (Headcount):
+  
+```Power BI
+Attrition % = ([Attrition]/[Headcount])
+```
+
+4. Compute the Average Salary,
+- To understand the compensation trends within the company, we calculate the average salary of employees in the organization:
+
+```Power BI
+Avg Salary = var a
+           = CALCULATED(AVERAGE(HRDataset_v14[Salary]))
+return a
+```
+
+5. Calculate Employee Age, 
+- Create new column and name it as "Age" in the HRDataset_v14 table to determine the age of each employee based on their date of birth (DOB) and current date:
+  
+```Power BI
+Age = DATEDIFF(HRDataset_v14[DOB], TODAY(),YEAR)
+```
+
+, then we calculate the Average Age of employees in Measure table:
+
+```Power BI
+Avg Age = AVERAGE(HRDataset_v14[Age])
+```
+
+
+
+
+### Results/Outcome
+
+The analysis results are summarized as follows:
+1. ss
+2. ss
+3. ss
+4. ss
+5. s
+
+### Recommendations
+
+Based on the analysis, I recommend the following actions:
+-dd
+-dd
+
+### Limitations
+
+I had to remove all zero values from budget and revenue columns because they would ha
+
+### Referen-------
