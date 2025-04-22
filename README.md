@@ -1,4 +1,4 @@
-# HR Analytics Dashboard
+   # HR Analytics Dashboard
 
 ### Project Overview
 
@@ -25,8 +25,10 @@ During data preparation phase, I performed the following tasks:
 - To make sure there were no duplicate entries in the dataset, I checked the "EmpID" column directly in Power BI’s Data View. First,clicked Data View. Next, I created a new column using a DAX formula to check for duplicates. The formula I used looks for any "EmpID" that appears more than once and labels it as either "Duplicate" or "Unique". After the column was created, I could easily filter the data to see if there were any duplicates. Fortunately, no duplicates were found, which means all "EmpIDs" in the dataset are unique. 
 
 - DAX formula i used :
-    
+
+```Power BI
 Is Duplicate = IF(CALCULATE(COUNTROWS('HRDataset_v14'), 'HRDataset_v14'[EmpID] = EARLIER('HRDataset_v14'[EmpID])) > 1, "Duplicate",  "Unique")  
+```
 
 - Duplicates Check: Conducted a check for duplicate entries based on the EmpID column. Result: No duplicates were found in the dataset.
 
