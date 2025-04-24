@@ -114,6 +114,30 @@ Age = DATEDIFF(HRDataset_v14[DOB], TODAY(),YEAR)
 Avg Age = AVERAGE(HRDataset_v14[Age])
 ```
 
+6. Develop an Age Bucket column in the HRDataset_v14 table to classify employees into age categories, helping HR analyze age-based trends in the workforce:
+
+ ```Power BI
+Age Bucket = SWITCH(TRUE(),
+HRDataset_v14[Age]>=18 && HRDataset_v14[Age]<= 25,"18-25",
+HRDataset_v14[Age]>=26 && HRDataset_v14[Age]<= 35,"26-35",
+HRDataset_v14[Age]>=36 && HRDataset_v14[Age]<= 45,"36-45",
+HRDataset_v14[Age]>=46 && HRDataset_v14[Age]<= 55,"46-55",
+HRDataset_v14[Age]>=56, "55+")
+```
+
+7. Calculate "Cumulative Headcount" column in Measure table:
+
+```Power BI
+Cummulative Headcount =
+var last_date = LASTDATE(HRDataset_v14[DateofHire])
+return
+CALCULATE([Headcount], ALL(HRDataset_v14[DateofHire]), HRDataset_v14[DateofHire]<= last_date)
+```
+
+8. Calculate new measure in Measure table and name it as "Salary":
+```Power BI
+Salary = SUM(HRDataset_v14[Salary])
+```
 
 
 
