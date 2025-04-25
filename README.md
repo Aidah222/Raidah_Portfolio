@@ -1,5 +1,14 @@
-   # HR Analytics Dashboard
+# HR Analytics Dashboard
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Data Sources](#data-sources)
+- [Tool](#tool)
+- [Data Preparation/Data Cleaning](#data-preparation-data-cleaning)
+- [Data Analysis](#data-analysis)
+- [Recommendation](#recommendations)
+- 
 ### Project Overview
 
 This data analysis project aims to create a  comprehensive HR Analytics Dashboard for analyzing key HR metrics such as employee headcount, attrition rates, and performance trends.By combining and displaying these essential metrics, the dashboard will provide valuable insights for HR professionals, helping them make informed decisions related to workforce management, employee retention, and overall performance optimization.
