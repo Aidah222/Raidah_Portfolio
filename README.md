@@ -5,7 +5,8 @@
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Tool](#tool)
-- [Data Preparation/Data Cleaning](#data-preparation--data-cleaning)
+- [Data Preparation or Data Cleaning](#data-preparation-or-data-cleaning)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Data Analysis](#data-analysis)
 - [Recommendation](#recommendations)
 - 
@@ -21,7 +22,7 @@ HRDataset_v14 : A publicly available HR datasets from Kaggle. [Link HERE](https:
 
 - Power Bi - Used to build an interactive dashboard and detailed report.
 
-###  Data Preparation/Data Cleaning
+###  Data Preparation or Data Cleaning
 
 During data preparation phase, I performed the following tasks:
 1. Data loading and Transform Data in Power Query Editor
@@ -41,7 +42,7 @@ Is Duplicate = IF(CALCULATE(COUNTROWS('HRDataset_v14'), 'HRDataset_v14'[EmpID] =
 
 - Duplicates Check: Conducted a check for duplicate entries based on the EmpID column. Result: No duplicates were found in the dataset.
 
-### Exploratory Data Analysis (EDA) :
+### Exploratory Data Analysis (EDA)
 
 In this section, we conduct an Exploratory Data Analysis (EDA) to address several key business questions that will help in building an HR Analytics Dashboard. These questions provide critical insights into the company's workforce and will guide HR decision-making.
 
@@ -152,12 +153,69 @@ Salary = SUM(HRDataset_v14[Salary])
 
 ### Results/Outcome
 
-The analysis results are summarized as follows:
-1. ss
-2. ss
-3. ss
-4. ss
-5. s
+The HR Analytics Dashboard has been successfully developed and deployed, providing valuable insights into key HR metrics, including employee headcount, attrition, attrition rates(%), salary averages, and Average age. Other than that, the dashboard has five slicers (Department, Employment Status, State, Gender, and Position), which allow users to dig into the data that matters to them and narrow down the information to specific groups. Below are the key findings from the analysis:
+
+Some of the key business questions we aimed to answer include:
+
+1. What is the total number of employees?
+The current total headcount is 311 employees across all departments and states
+
+2. What is the number of employees who have left the organization (Attrition)?
+The total number of employees who have left the organization (Attrition) is 104. The department with high Attrition is the production department with 83 employees.
+
+3. What is the Attrition rate (Attrition%)?
+The Attrition Rate is 33.44%, indicating the percentage of employees who left the company relative to the total headcount.
+
+4. What is the Average Salary within a company?
+The Average Salary within a company is 69.02K
+
+5. What is the Average Age of employees?
+The Average Age of employees is 46.41 years
+
+6. Headcount by Department: This visualization will display the distribution of employees across various departments within the company, helping to identify staffing levels and potential resource gaps.
+
+- The Production Department has the highest headcount, with 209 employees.
+
+- The Admin Offices and Executive Office departments have the least headcount, with only 9 and 1 employee respectively, suggesting they may need additional staff to meet operational demands.
+
+7. Headcount by Age Bucket: This will show the distribution of employees by age groups, allowing HR to understand the company’s demographic trends. A new column "Age Bucket" will be created in the dataset to categorize employees into age groups.
+
+- The age group 36-45 has the highest headcount, with 153 employees, representing 49.2% of the total workforce.
+
+- The age group 26-35 has the lowest headcount, with only 11 employees, making up 3.54% of the total workforce.
+
+8. Headcount by Marital Status and Gender: This visualization will display the distribution of employees based on their marital status and gender, helping HR analyze workforce diversity and demographic trends.
+
+- There are a total of 176 female employees and 135 male employees.
+
+- For marital status:
+
+  a. Single: 62 males and 75 females
+
+  b. Married: 52 males and 72 females
+
+  c. Divorced: 14 males and 16 females
+
+  d. Separated: 3 males and 9 females
+
+  e. Widowed: 4 males and 4 females
+
+9. Cumulative Headcount and Headcount by Year: This will show how headcount has evolved over time, with a new Cumulative Headcount measure being created. It will help track employee growth and retention trends over time.
+
+- From 2011 to 2015, the Cumulative Headcount grew steadily, showing consistent hiring and a healthy recruitment trend. The Headcount by Year indicates regular employee inflows, reflecting ongoing recruitment efforts.
+
+- From 2015 to 2018, the Cumulative Headcount remained mostly flat, with occasional small increases. During this period, the company hired only 1 to 2 employees per year, resulting in minimal growth in overall headcount.
+
+10. Attrition by Year: This visualization will track attrition trends over time, identifying periods when employee turnover was higher or lower, and informing retention strategies.
+
+- The Attrition by Year chart shows a fluctuating pattern of employee turnover over the years, with certain years experiencing higher attrition than others.
+
+- The highest attrition occurred in 2011, with 11 employees leaving the company that year. This represents a sharp spike in turnover, significantly higher than the other years, suggesting that 2011 was a year of heightened employee departures.
+
+11. Headcount by Recruitment Source: This visualization will show the distribution of employees based on where they were recruited from (e.g., job boards, internal referrals, etc.), helping HR understand the effectiveness of various recruitment channels.
+
+The Headcount by Recruitment Source chart shows the distribution of employees across various recruitment channels. The highest bar is for Indeed, with 87 headcount, followed by LinkedIn with 76 headcount. Other notable channels include Google Search, Employee Referrals, and Diversity Job Fair, with moderate contributions. CareerBuilder, the Company Website, and the Other category also played a role, though with smaller numbers of hires. Finally, the Online Web Application channel had the least impact, contributing only 1 headcount.
+
 
 ### Recommendations
 
