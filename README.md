@@ -235,8 +235,6 @@ Based on the analysis, I recommend the following actions:
 
 3. HR should take a closer look at why so many employees are leaving, especially in the Production department. They can start by reviewing exit interview feedback and checking salary trends. By understanding these issues, HR can work on improving retention and making sure employees feel more satisfied and valued.
 
-4. Focus on strengthening job boards or explore new recruitment avenues like university recruitment programs to diversify the talent pool, while continuing to use platforms like Indeed and linkedin.
-
 ### 🔖Limitations
 
 1. The dataset has limited historical data, only covering the period from September 2006 to September 2018. This may not fully capture longer-term trends in employee behavior, attrition, or recruitment patterns.
