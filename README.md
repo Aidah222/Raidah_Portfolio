@@ -1,5 +1,5 @@
-# HR Analytics Dashboard
-## Table of Contents
+# HR Analytics Dashboard 
+## 🔖Table of Contents
 
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
@@ -11,7 +11,7 @@
 - [Recommendation](#recommendations)
 - [Limitations](#limitations)
   
-### Project Overview
+### 🔖Project Overview 
 ---
 This data analysis project aims to create a  comprehensive HR Analytics Dashboard for analyzing key HR metrics such as employee headcount, attrition rates, and performance trends.By combining and displaying these essential metrics, the dashboard will provide valuable insights for HR professionals, helping them make informed decisions related to workforce management, employee retention, and overall performance optimization.
 
@@ -20,15 +20,15 @@ This data analysis project aims to create a  comprehensive HR Analytics Dashboar
 
 ![HR Analytics Dashboard Detailed View](https://github.com/user-attachments/assets/8507b9bd-b6ef-44c4-8cff-a8967872c17d)
 
-### Data Sources
+### 🔖Data Sources
 
 HRDataset_v14 : A publicly available HR datasets from Kaggle. [Link HERE](https://www.kaggle.com/datasets/rhuebner/human-resources-data-set/data?select=HRDataset_v14.csv)
 
-### Tool
+### 🔖Tool
 
 - Power Bi - Used to build an interactive dashboard and detailed report.
 
-###  Data Preparation or Data Cleaning
+###  🔖Data Preparation or Data Cleaning
 
 During data preparation phase, I performed the following tasks:
 1. Data loading and Transform Data in Power Query Editor
@@ -48,7 +48,7 @@ Is Duplicate = IF(CALCULATE(COUNTROWS('HRDataset_v14'), 'HRDataset_v14'[EmpID] =
 
 - Duplicates Check: Conducted a check for duplicate entries based on the EmpID column. Result: No duplicates were found in the dataset.
 
-### Exploratory Data Analysis (EDA)
+### 🔖Exploratory Data Analysis (EDA)
 
 In this section, we conduct an Exploratory Data Analysis (EDA) to address several key business questions that will help in building an HR Analytics Dashboard. These questions provide critical insights into the company's workforce and will guide HR decision-making.
 
@@ -60,7 +60,7 @@ Some of the key business questions we aimed to answer include:
 - What is the Average Salary within a company?
 - What is the Average Age of employees?
 
-### Visualization Plan
+### 🔖Visualization Plan
 
 Below are the key visualizations that we will generate for the HR Analytics Dashboard:
 
@@ -71,7 +71,7 @@ Below are the key visualizations that we will generate for the HR Analytics Dash
 - Attrition by Date of Hire
 - Headcount by Recruitment Source
 
-### Data Analysis
+### 🔖Data Analysis
 
 Analyzing the HR data some KPIs i want to find out, then create separate table (name as "Measure" table) and include all the measures:
 
@@ -155,7 +155,7 @@ CALCULATE([Headcount], ALL(HRDataset_v14[DateofHire]), HRDataset_v14[DateofHire]
 Salary = SUM(HRDataset_v14[Salary])
 ```
 
-### Results
+### 🔖Results
 
 The HR Analytics Dashboard has been successfully developed and deployed, providing valuable insights into key HR metrics, including employee headcount, attrition, attrition rates(%), salary averages, and Average age. Other than that, the dashboard has five slicers (Department, Employment Status, State, Gender, and Position), which allow users to dig into the data that matters to them and narrow down the information to specific groups. Below are the key findings from the analysis:
 
@@ -225,7 +225,7 @@ Some of the key business questions we aimed to answer include:
     
 - The Headcount by Recruitment Source chart shows the distribution of employees across various recruitment channels. The highest bar is for Indeed, with 87 headcount, followed by LinkedIn with 76 headcount. Other notable channels include Google Search, Employee Referrals, and Diversity Job Fair, with moderate contributions. CareerBuilder, the Company Website, and the Other category also played a role, though with smaller numbers of hires. Finally, the Online Web Application channel had the least impact, contributing only 1 headcount.
 
-### Recommendations
+### 🔖Recommendations
 
 Based on the analysis, I recommend the following actions:
 
@@ -237,7 +237,7 @@ Based on the analysis, I recommend the following actions:
 
 4. Focus on strengthening job boards or explore new recruitment avenues like university recruitment programs to diversify the talent pool, while continuing to use platforms like Indeed and linkedin.
 
-### Limitations
+### 🔖Limitations
 
 1. The dataset has limited historical data, only covering the period from September 2006 to September 2018. This may not fully capture longer-term trends in employee behavior, attrition, or recruitment patterns.
 
