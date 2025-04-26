@@ -15,6 +15,11 @@
 ---
 This data analysis project aims to create a  comprehensive HR Analytics Dashboard for analyzing key HR metrics such as employee headcount, attrition rates, and performance trends.By combining and displaying these essential metrics, the dashboard will provide valuable insights for HR professionals, helping them make informed decisions related to workforce management, employee retention, and overall performance optimization.
 
+
+![HR Analytics Dashboard Report](https://github.com/user-attachments/assets/067bf0a7-f30c-4eb8-bb9e-67ee38b5d3ba)
+
+![HR Analytics Dashboard Detailed View](https://github.com/user-attachments/assets/8507b9bd-b6ef-44c4-8cff-a8967872c17d)
+
 ### Data Sources
 
 HRDataset_v14 : A publicly available HR datasets from Kaggle. [Link HERE](https://www.kaggle.com/datasets/rhuebner/human-resources-data-set/data?select=HRDataset_v14.csv)
